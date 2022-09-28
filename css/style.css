@@ -1,0 +1,56 @@
+:root {
+    --background-color: #f5eace;
+    --font-color: #c43d3d;
+    --font-h2-color: #314f25;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    background: var(--background-color);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: sans-serif;
+    justify-content: center;
+}
+
+main {
+    display: flex;
+    width: 80%;
+    min-width: 320px;
+    max-width: 900px;
+    flex-direction: column;
+}
+
+h1 {
+    font-weight: bold;
+    color: var(--font-color);
+    text-align: center;
+}
+
+.main-date-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.date--container {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 15px;
+    margin: 10px;
+}
+
+h2 {
+    color: var(--font-h2-color);
+    margin-bottom: 10px;
+}
