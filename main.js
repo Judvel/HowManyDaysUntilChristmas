@@ -4,8 +4,7 @@ const days = document.querySelector('#days');
 const hours = document.querySelector('#hours');
 const minutes = document.querySelector('#minutes');
 const seconds = document.querySelector('#seconds');
-
-/* setInterval(secondsTest, 1000); */
+const christmasPage = document.querySelector('.merry-christmas');
 
 const today = new Date();
 const christmasYear = today.getFullYear();
@@ -34,6 +33,7 @@ let hoursCount = hoursLeft;
 let daysCount = daysLeft;
 let weeksCount = weeksLeft;
 let monthsCount = monthsLeft;
+
 setInterval(HowManyDays, 1000);
 
 function HowManyDays() {
@@ -71,5 +71,12 @@ function HowManyDays() {
     months.innerText = monthsCount;
     weeks.innerText = weeksCount;
     days.innerText = daysCount;
+
+    if (secondCount == 0 && minutesCount == 0 && hoursCount == 0 && monthsCount == 0 && weeksCount == 0 && daysCount == 0) {
+        christmasPage.classList.toggle('inactive');
+        return;
+    } else if (today.getDay > 25) {
+        christmasPage.classList.toggle('inactive');
+    }
 
 }
